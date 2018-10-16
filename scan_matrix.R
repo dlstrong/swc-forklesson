@@ -11,6 +11,7 @@ scan_matrix <- function(myfile){
   nCol <- length(headers)
   # set up 'what' for scan
   mywhat <- list(character(), integer())
+  # expand the list to repeat integer as many times as needed
   mywhat <- mywhat[c(1, rep(2, nCol))]
   # run scan
   scanout <- scan(mycon, what = mywhat, sep = ",")
